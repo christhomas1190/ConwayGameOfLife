@@ -1,15 +1,22 @@
 package com.zipcodeconway;
 
 public class ConwayGameOfLife {
-
+    private final Integer dimension;
+//    private final int[][] currentGeneration;
     private Object display;
     private SimpleWindow displayWindow;
 
-    public ConwayGameOfLife(Integer dimension) {
 
-    }
+    public ConwayGameOfLife(Integer dimension) {
+            this.dimension = dimension;
+            this.displayWindow = new SimpleWindow(dimension);
+//            this.currentGeneration = createRandomStart(dimension);
+        }
+    
 
     public ConwayGameOfLife(Integer dimension, int[][] startmatrix) {
+        this.dimension = dimension;
+
     }
 
     public static void main(String[] args) {
@@ -36,7 +43,7 @@ public class ConwayGameOfLife {
             for(int gen=0;gen<maxGenerations;gen++){
 
                 this.displayWindow.display(currentGeneration,gen);
-
+                for(int i =0; i<50;i++){
 
                     for(int j=0; i<50;j++){
 
@@ -56,6 +63,12 @@ public class ConwayGameOfLife {
     // copy the values of 'next' matrix to 'current' matrix,
     // and then zero out the contents of 'next' matrix
     public void copyAndZeroOut(int[][] next, int[][] current) {
+        for (int i=0; i<next.length;i++) {
+            for (int j = 0; j<next[i].length;j++){
+                current[i][j] = next[i][j];
+                next[i][j]=0; // Reset
+            }
+        }
     }
 
     // Calculate if an individual cell should be alive in the next generation.
@@ -83,4 +96,5 @@ public class ConwayGameOfLife {
         }else{
             return liveNeighbors == 3 ? 0 : 1 ;}
     }
-}
+    }
+

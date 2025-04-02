@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e282cee1-bfe9-42a3-9794-9633eb4654d1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Game-Of-Life-Java.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zipcodeconway/ConwayGameOfLife.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zipcodeconway/ConwayGameOfLife.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zipcodeconway/SimpleWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zipcodeconway/SimpleWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,6 +247,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.All in Game-Of-Life-Java.executor": "Run",
     "JUnit.ConwayGameOfLifeTest.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -278,7 +271,7 @@
       <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ConwayGameOfLifeTest">
+  <component name="RunManager" selected="Application.ConwayGameOfLife">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -308,16 +301,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameofLife" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="GameofLife" />
-      <module name="Game-Of-Life-Java" />
+    <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    <configuration name="All in Game-Of-Life-Java" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Game-Of-Life-Java" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -417,8 +411,8 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.GameofLife" />
       <item itemvalue="Application.ConwayGameOfLife" />
+      <item itemvalue="JUnit.All in Game-Of-Life-Java" />
       <item itemvalue="JUnit.ConwayGameOfLifeTest.runTest" />
       <item itemvalue="JUnit.ConwayGameOfLifeTest.runTest2" />
       <item itemvalue="JUnit.ConwayGameOfLifeTest" />
@@ -426,11 +420,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ConwayGameOfLifeTest" />
         <item itemvalue="Application.ConwayGameOfLife" />
+        <item itemvalue="JUnit.All in Game-Of-Life-Java" />
+        <item itemvalue="JUnit.ConwayGameOfLifeTest" />
         <item itemvalue="JUnit.ConwayGameOfLifeTest.runTest2" />
         <item itemvalue="JUnit.ConwayGameOfLifeTest.runTest" />
-        <item itemvalue="Application.GameofLife" />
       </list>
     </recent_temporary>
   </component>
