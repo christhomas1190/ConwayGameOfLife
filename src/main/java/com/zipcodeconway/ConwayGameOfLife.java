@@ -29,16 +29,29 @@ public class ConwayGameOfLife {
         }
         return world;
     }
-//
-//    public int[][] simulate(Integer maxGenerations) {
-//        int[][] currentGeneration= createRandomStart(50);
-//        int[][] nextGeneration= new int[50][50];
-//            for(int gen=0;gen<maxGenerations;gen++){
-//                this.displayWindow.display(currentGeneration,gen);
-//            }
-//
-//
-//    }
+
+    public int[][] simulate(Integer maxGenerations) {
+        int[][] currentGeneration= createRandomStart(50);
+        int[][] nextGeneration= new int[50][50];
+            for(int gen=0;gen<maxGenerations;gen++){
+
+                this.displayWindow.display(currentGeneration,gen);
+
+
+                    for(int j=0; i<50;j++){
+
+                        nextGeneration[i][j]=isAlive(i,j,currentGeneration);
+                    }
+                }
+                copyAndZeroOut(nextGeneration, currentGeneration);
+
+                this.displayWindow.sleep(125);
+            }
+
+        return currentGeneration;
+
+
+    }
 
     // copy the values of 'next' matrix to 'current' matrix,
     // and then zero out the contents of 'next' matrix
