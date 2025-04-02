@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class SimpleWindow {
+
     static JPanel panel;
     static JFrame frame;
     private Integer dim = 0;
@@ -50,4 +51,5 @@ public class SimpleWindow {
         }
 
     }
+
 }

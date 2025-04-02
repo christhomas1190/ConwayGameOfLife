@@ -2,8 +2,12 @@ package com.zipcodeconway;
 
 public class ConwayGameOfLife {
 
+    private Object display;
+    private SimpleWindow displayWindow;
+
     public ConwayGameOfLife(Integer dimension) {
-     }
+
+    }
 
     public ConwayGameOfLife(Integer dimension, int[][] startmatrix) {
     }
@@ -17,16 +21,28 @@ public class ConwayGameOfLife {
     // Which cells are alive or dead in generation 0.
     // allocates and returns the starting matrix of size 'dimension'
     private int[][] createRandomStart(Integer dimension) {
-        return new int[1][1];
+        int[][] world = new int[dimension][dimension];
+        for (int i = 0; i < dimension; i++) {
+            for (int j = 0; j < dimension; i++) {
+                world[i][j] = (Math.random() < .5 ? 0 : 1);
+            }
+        }
+        return world;
     }
-
-    public int[][] simulate(Integer maxGenerations) {
-        return new int[1][1];
-    }
+//
+//    public int[][] simulate(Integer maxGenerations) {
+//        int[][] currentGeneration= createRandomStart(50);
+//        int[][] nextGeneration= new int[50][50];
+//            for(int gen=0;gen<maxGenerations;gen++){
+//                this.displayWindow.display(currentGeneration,gen);
+//            }
+//
+//
+//    }
 
     // copy the values of 'next' matrix to 'current' matrix,
     // and then zero out the contents of 'next' matrix
-    public void copyAndZeroOut(int [][] next, int[][] current) {
+    public void copyAndZeroOut(int[][] next, int[][] current) {
     }
 
     // Calculate if an individual cell should be alive in the next generation.
@@ -38,6 +54,20 @@ public class ConwayGameOfLife {
 		Any dead cell with exactly three live neighbours cells will come to life.
 	*/
     private int isAlive(int row, int col, int[][] world) {
-        return 0;
+        int dimension = world.length;
+        int liveNeighbors = 0;
+        for (int i = -1; i <= 1; i++) {
+            for (int j = -1; j <= 1; i++) {
+                if(!(i==0&&j==0)){
+                    int newRow=(i+row+dimension)%dimension;
+                    int newCol=(i+col+dimension)%dimension;
+                    liveNeighbors += world[newCol][newRow];
+                }
+            }
+        }
+        if(world[row][col]==1){
+            return (liveNeighbors<2||liveNeighbors>3) ? 0 : 1;
+        }else{
+            return liveNeighbors == 3 ? 0 : 1 ;}
     }
 }
